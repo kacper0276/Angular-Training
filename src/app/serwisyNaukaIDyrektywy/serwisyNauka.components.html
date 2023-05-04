@@ -1,0 +1,8 @@
+<button (click)="add()">Klik</button>
+<p>{{click}}</p>
+<p appChecked>Napis</p>
+<!-- appChecked to dyrektywa, która może dodać klase, zmienić styl etc -->
+<b appDate [date]="'wartosc'">Inna dyrektywa</b>
+<hr />
+<p>{{nauka | transformtext: ' - super'}}</p>
+<!-- Po : w pipe przekazujemy argumenty-->

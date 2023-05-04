@@ -1,0 +1,33 @@
+<p>Witaj {{ title | uppercase }}</p>
+<hr />
+<b>{{ data | date : "dd-MM-yyyy" }}</b>
+<hr />
+<p>{{ pi | number : "1.1-2" }}</p>
+<hr />
+<p>ngFor użycie</p>
+<div *ngIf="tablica.length > 0; then spelniony; else niespelniony"></div>
+
+<ng-template #spelniony>
+  <ul *ngFor="let tab of tablica; let i = index">
+    <!-- let e = even (Parzyste indexy) -->
+    <li>{{ i }} {{ tab }}</li>
+  </ul>
+</ng-template>
+
+<ng-template #niespelniony>
+  <p>Nie ma</p>
+</ng-template>
+
+<hr />
+<div *ngFor="let ind of switchTest">
+  <div [ngSwitch]="ind">
+    <p *ngSwitchCase="1">Jeden</p>
+    <p *ngSwitchCase="2">Dwa</p>
+    <p *ngSwitchCase="3">Trzy</p>
+    <p *ngSwitchDefault>Inny</p>
+  </div>
+</div>
+<hr />
+<!-- ngIf - usuwa z DOM całą strukturę elementu -->
+<!-- [hidden] - cały czas widoczne w strukturze dom -->
+<p [hidden]="true">Hidden</p>

@@ -1,0 +1,18 @@
+<h1>Nauka input value</h1>
+<div>
+  <input type="text" [value]="inputText" />
+</div>
+<div>
+  <input type="text" [(ngModel)]="inputText2Way" />
+  {{ inputText2Way }}
+</div>
+<div>
+  <input type="text" (click)="click()" />
+  <button [disabled]="button">Dodaj</button>
+  {{ showClick }}
+</div>
+<!-- [className] <- w taki sposób dajemy klasy, src itd...  -->
+<!-- (focus) - zamiast onFocus, (click) - zamiast onClick, (paste) - zamiast onPaste, (mousemove) - onMouseMove -->
+<hr />
+<p>{{ tekst }}</p>
+<input (input)="zmianaTekstu($event)" />

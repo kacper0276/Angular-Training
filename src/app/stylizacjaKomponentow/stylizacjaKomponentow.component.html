@@ -1,0 +1,12 @@
+<p [ngStyle]="{ color: 'red' }">Tekst</p>
+<p [ngStyle]="{ color: getColor() }">Tekst</p>
+<hr />
+<ul>
+  <li
+    *ngFor="let i of tab; let odd = odd"
+    [ngClass]="{ 'odd-li': odd, 'last-task': tab.length === 1 }"
+  >
+    {{ i }}
+  </li>
+</ul>
+<button class="btn btn-primary">KLIK</button>

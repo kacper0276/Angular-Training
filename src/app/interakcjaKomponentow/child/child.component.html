@@ -1,0 +1,5 @@
+<p>Przekazane taski</p>
+<div *ngFor="let i of taskiPrzekazane">
+  <b>{{ i }}</b>
+  <button (click)="select(i)">KLIK</button>
+</div>
