@@ -16,6 +16,7 @@ const routes: Routes = [
   { path: 'stylizacjakomponentu', component: StylizacjaKomponentow },
   { path: 'serwisynauka', component: SerwisyNauka },
   { path: 'zapytaniahttp', component: zapytaniaHTTPComponent },
+  { path: 'a/:id', component: DataBindingComponent },
 ];
 
 @NgModule({
